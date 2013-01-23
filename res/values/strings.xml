@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, GameActivity!</string>
+	<string name="app_name">美女SOS</string>
+	<string name="time">恭喜你，经过$秒的\n
+		奋战,你成功的解救了\n
+		一个超级大美女！美\n
+		女会给你一个大大的\n
+		奖励，好好享受吧！</string>
+	<string name="time1">很遗憾，$秒过去了\n
+		你还是没能拯救本关\n
+		美女！要雄起来再来\n
+		一遍?还是去拯救下\n
+		一关的美女?你看着办吧.</string>
+	<string name="quit">退出</string>
+	<string name="sure_quit">确定退出游戏？</string>
+	<string name="alert_dialog_ok">确定</string>
+	<string name="alert_dialog_cancel">在玩一把</string>
+</resources>

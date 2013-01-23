@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="280dip"
+        android:layout_height="230dip"
+        android:layout_gravity="center"
+        android:orientation="vertical" style="@drawable/screen_shot_bg" android:background="@drawable/screen_shot_bg">
+
+        <FrameLayout
+            android:id="@+id/ff1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip" android:background="@drawable/wo_screen_shot_titlebg">
+            
+            <TextView
+                android:id="@+id/wo_lever_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dip"
+                android:textStyle="bold" android:layout_gravity="center" android:textColor="#fff"/>
+
+        </FrameLayout>
+        
+        
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                       <TextView
+                android:id="@+id/wo_lever_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="16dip" android:textColor="#000" android:layout_gravity="top|left" android:layout_marginLeft="8dip" android:layout_marginTop="8dip"/>
+                </LinearLayout>
+            </ScrollView>
+
+        <Button
+            android:id="@+id/wo_bt_sumbit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center" android:layout_marginBottom="5dip" android:background="@drawable/wo_screen_shot_btshare" android:visibility="gone"/>
+
+    </LinearLayout>
+
+</FrameLayout>

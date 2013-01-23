@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/ln_wo_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/wo_main_title_bg" android:visibility="gone">
+
+            <Button
+                android:id="@+id/bt_wo_title_back"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/wo_main_title_back_select"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" >
+
+                <ImageView
+                    android:id="@+id/img_wo_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dip"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tx_wo_title"
+                    style="@style/title_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/img_wo_title_right"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="5dip"
+                android:scaleType="centerInside" />
+
+            <Button
+                android:id="@+id/bt_wo_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/wo_submit_normal"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="1">
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/webview_top"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/mian_tab_ln"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:gravity="center" android:weightSum="5" android:visibility="gone">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</AbsoluteLayout>

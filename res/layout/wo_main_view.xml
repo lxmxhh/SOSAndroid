@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="0dip"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="53dip"
+        android:layout_gravity="bottom"
+        android:id="@+id/wo_main_tab_focused" android:background="@drawable/wo_maintab_bg"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="53dip"
+            android:orientation="vertical" android:layout_gravity="bottom">
+
+            <View
+                android:id="@+id/padding_top_view"
+                android:layout_width="fill_parent"
+                android:layout_height="8.5dip"
+                android:background="@color/of_transparent" android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="27dip"
+                android:layout_height="27dip"
+                android:layout_gravity="bottom|center_horizontal"
+                android:padding="0dip" android:layout_marginBottom="20dip" android:layout_marginTop="6dip"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/message_count_tv"
+            android:layout_width="21dip"
+            android:layout_height="21dip"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="14dip"
+            android:background="@drawable/wo_tixing_bg"
+            android:gravity="center"
+            android:padding="0dip"
+            android:textColor="@android:color/white"
+            android:textSize="10dip" android:text="13" android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tx_main"
+            style="@style/m_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="4dip"
+            android:gravity="center"
+            android:text="aaaaa" />
+    </FrameLayout>
+
+</FrameLayout>

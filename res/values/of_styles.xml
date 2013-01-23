@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <style name="Loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/of_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/of_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="m_Textview">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">11dip</item>
+    </style>
+
+    <style name="title_Textview">
+        <item name="android:textColor">#319BBB</item>
+        <item name="android:textSize">18dip</item>
+    </style>
+
+</resources>

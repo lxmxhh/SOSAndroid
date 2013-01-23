@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff000000" >
+
+    <ImageView
+        android:id="@+id/of_pictrue_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" android:scaleType="matrix">
+    </ImageView>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="50dip" android:layout_alignParentTop="true" android:background="@drawable/wo_preview_bg">
+
+        <Button
+            android:id="@+id/of_picture_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wo_preview_cancel" android:layout_gravity="left|center" android:layout_marginLeft="10dip"/>
+
+        <Button
+            android:id="@+id/of_picture_btsave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存" android:layout_gravity="right|center" android:layout_marginLeft="10dip"/>
+    </FrameLayout>
+
+</RelativeLayout>

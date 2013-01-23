@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/back" android:background="@drawable/start1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ViewFlipper android:id="@+id/ViewFlipper01"
+		android:visibility="gone" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	</ViewFlipper>
+	<TextView android:id="@+id/pageControl" android:layout_width="fill_parent"
+		android:layout_height="40px" android:background="#8f00000f"
+		android:visibility="gone" android:layout_alignParentBottom="true"
+		android:gravity="center" />
+	<ImageButton android:id="@+id/play_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_centerInParent="true" android:background="@drawable/buttons_bg1"
+		android:src="@drawable/buttons_play" />
+
+	<ImageButton
+	    android:id="@+id/wo_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:background="@drawable/buttons_wo"
+	    android:paddingRight="5dip"
+	    android:paddingTop="5dip" />
+
+	<ImageView android:id="@+id/title_img" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/play_btn"
+		android:layout_centerHorizontal="true" android:paddingTop="10dip" />
+	<ImageView android:id="@+id/clock" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/clock"
+		android:paddingTop="5dip" android:paddingLeft="5dip"
+		android:visibility="gone" />
+	<ProgressBar android:id="@+id/timer"
+		android:layout_toRightOf="@id/clock" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:visibility="gone"
+		android:paddingTop="8dip" android:paddingLeft="5dip"
+		android:paddingRight="10dip" android:paddingBottom="5dip"
+		style="?android:attr/progressBarStyleHorizontal" />
+	<com.ooxx.sos.view.GameView android:layout_width="wrap_content"
+		android:gravity="center_horizontal" android:layout_height="wrap_content"
+		android:id="@+id/game_view" android:visibility="gone"
+		android:layout_below="@id/timer" android:paddingBottom="36dip"
+		android:layout_above="@+id/ad" />
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_above="@+id/ad"
+		android:layout_centerHorizontal="true" android:paddingBottom="2dip">
+		<ImageButton android:id="@+id/refresh_btn"
+			android:background="@drawable/refresh" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:visibility="gone" />
+		<TextView android:id="@+id/text_refresh_num"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/shape" android:textColor="@android:color/white"
+			android:text="3" android:visibility="gone" android:textSize="15sp" />
+		<ImageButton android:id="@+id/tip_btn"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/light_bulb" android:visibility="gone" />
+		<TextView android:id="@+id/text_tip_num"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/shape" android:textColor="@android:color/white"
+			android:visibility="gone" android:text="3" android:textSize="15sp" />
+		<ImageButton android:id="@+id/tip_btn1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:visibility="gone" />
+		<TextView android:id="@+id/text_tip_num1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/shape" android:textColor="@android:color/white"
+			android:visibility="gone" android:text="3" android:textSize="15sp" />
+	</LinearLayout>
+
+</RelativeLayout>

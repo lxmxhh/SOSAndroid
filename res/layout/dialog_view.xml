@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/view_dialog" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView android:id="@+id/text_message"
+		android:layout_height="wrap_content" android:layout_width="fill_parent"
+		android:textColor="@android:color/white" android:gravity="center_horizontal"
+		android:textSize="18sp" />
+	<TextView android:id="@+id/text_time" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="@string/time"
+		android:layout_below="@id/text_message" android:textColor="@android:color/white"
+		android:gravity="center" android:textSize="18sp" />
+	<LinearLayout android:orientation="horizontal"
+		android:layout_below="@id/text_time" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:gravity="center_horizontal"
+		android:padding="10dip">
+		<!-- android:src="@drawable/buttons_quit" -->
+		<TextView android:id="@+id/menu_imgbtn" android:text="看 图"
+			android:hint="看 图" android:textSize="24dp" android:textColor="#ffffff"
+			android:visibility="gone" android:layout_marginRight="15dip"
+			android:layout_height="wrap_content" android:layout_width="wrap_content" />
+		<!-- android:src="@drawable/buttons_bg20" -->
+		<TextView android:id="@+id/replay_imgbtn" android:text="重 玩"
+			android:textSize="24dp" android:textColor="#ffffff"
+			android:visibility="gone" android:hint="重 玩" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+		<!-- android:src="@drawable/buttons_next" -->  
+		<TextView android:id="@+id/next_imgbtn" android:text="下一关"
+			android:textSize="24dp" android:hint="下一关" android:textColor="#ffffff"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_marginLeft="15dip" />
+	</LinearLayout>
+</RelativeLayout>
