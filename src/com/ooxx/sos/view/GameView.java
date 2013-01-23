@@ -60,8 +60,8 @@ public class GameView extends BoardView {
 	private int totalTime = Const.totalTime;
 	private int leftTime;
 
-	public static MusicPlayer musicPlay;
-	public MediaPlayer player;
+	//public static MusicPlayer musicPlay;
+	//public MediaPlayer player;
 
 	private RefreshTime refreshTime;
 	private RefreshHandler refreshHandler = new RefreshHandler();
@@ -84,8 +84,8 @@ public class GameView extends BoardView {
 	 */
 	public GameView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		player = MediaPlayer.create(context, R.raw.back2new);
-		player.setLooping(true);// 设置循环播放
+//		player = MediaPlayer.create(context, R.raw.back2new);
+//		player.setLooping(true);// 设置循环播放
 	}
 
 	public void startPlay() {
@@ -97,9 +97,9 @@ public class GameView extends BoardView {
 		toolsChangedListener.onTipChanged(help);
 		leftTime = totalTime;
 		initMap();
-		if (Const.soundon) {
-			player.start();
-		}
+//		if (Const.soundon) {
+//			player.start();
+//		}
 		refreshTime = new RefreshTime();
 		t = new Thread(refreshTime); // 注意正确启动一个实现Runnable接口的线程类
 		t.start();
@@ -107,15 +107,15 @@ public class GameView extends BoardView {
 	}
 
 	public static void initSound(Context context) {
-		musicPlay = new MusicPlayer();
-		musicPlay.initSounds(context);
-		musicPlay.loadSfx(context, R.raw.choose, ID_SOUND_CHOOSE);
-		musicPlay.loadSfx(context, R.raw.disappear1, ID_SOUND_DISAPEAR);
-		musicPlay.loadSfx(context, R.raw.win, ID_SOUND_WIN);
-		musicPlay.loadSfx(context, R.raw.lose, ID_SOUND_LOSE);
-		musicPlay.loadSfx(context, R.raw.item1, ID_SOUND_REFRESH);
-		musicPlay.loadSfx(context, R.raw.item2, ID_SOUND_TIP);
-		musicPlay.loadSfx(context, R.raw.alarm, ID_SOUND_ERROR);
+//		musicPlay = new MusicPlayer();
+//		musicPlay.initSounds(context);
+//		musicPlay.loadSfx(context, R.raw.choose, ID_SOUND_CHOOSE);
+//		musicPlay.loadSfx(context, R.raw.disappear1, ID_SOUND_DISAPEAR);
+//		musicPlay.loadSfx(context, R.raw.win, ID_SOUND_WIN);
+//		musicPlay.loadSfx(context, R.raw.lose, ID_SOUND_LOSE);
+//		musicPlay.loadSfx(context, R.raw.item1, ID_SOUND_REFRESH);
+//		musicPlay.loadSfx(context, R.raw.item2, ID_SOUND_TIP);
+//		musicPlay.loadSfx(context, R.raw.alarm, ID_SOUND_ERROR);
 	}
 
 	class RefreshHandler extends Handler {
@@ -127,9 +127,9 @@ public class GameView extends BoardView {
 				GameView.this.invalidate();
 				if (win()) {
 					setMode(WIN);
-					if (Const.soundon) {
-						musicPlay.play(ID_SOUND_WIN, 0);
-					}
+//					if (Const.soundon) {
+//						musicPlay.play(ID_SOUND_WIN, 0);
+//					}
 					isStop = true;
 					isContinue = false;
 				} else if (die()) { // 调用一次die方法！此时如果die返回为false，即还能够连通
@@ -180,9 +180,9 @@ public class GameView extends BoardView {
 			// setMode(LOSE);
 			else if (leftTime == 0) {
 				setMode(LOSE);
-				if (Const.soundon) {
-					musicPlay.play(ID_SOUND_LOSE, 0);
-				}
+//				if (Const.soundon) {
+//					musicPlay.play(ID_SOUND_LOSE, 0);
+//				}
 			}
 		}
 	}
@@ -317,25 +317,25 @@ public class GameView extends BoardView {
 					if (link(selected.get(0), p)) { // 能够连通，path中的数据是在link判断时如果返回真，方法内部就已经将数据添加进去
 						selected.add(p);
 						drawLine(path.toArray(new Point[] {}));
-						if (Const.soundon) {
-							musicPlay.play(ID_SOUND_DISAPEAR, 0);
-						}
+//						if (Const.soundon) {
+//							musicPlay.play(ID_SOUND_DISAPEAR, 0);
+//						}
 						refreshHandler.sendRefresh(500);
 					} else {// 不能够连通
 						selected.clear();
 						selected.add(p);
-						if (Const.soundon) {
-							musicPlay.play(ID_SOUND_CHOOSE, 0);
-						}
+//						if (Const.soundon) {
+//							musicPlay.play(ID_SOUND_CHOOSE, 0);
+//						}
 						GameView.this.invalidate(); // 在这儿说一下refreshHanler.sendRefresh(int)
 													// 跟单纯调用GameView.this.invalidate()区别
 													// 前者除了后者只拥有的刷新显示之外，还加了是否已经无解或者已经完成任务的判断的操作。
 					}
 				} else {// 此时的selected中的size只能等于0
 					selected.add(p);
-					if (Const.soundon) {
-						musicPlay.play(ID_SOUND_CHOOSE, 0);
-					}
+//					if (Const.soundon) {
+//						musicPlay.play(ID_SOUND_CHOOSE, 0);
+//					}
 					GameView.this.invalidate();
 				}
 			}
@@ -506,14 +506,14 @@ public class GameView extends BoardView {
 	 */
 	public void autoHelp() {
 		if (help == 0) {
-			if (Const.soundon) {
-				musicPlay.play(ID_SOUND_ERROR, 0);
-			}
+//			if (Const.soundon) {
+//				musicPlay.play(ID_SOUND_ERROR, 0);
+//			}
 			return;
 		} else {
-			if (Const.soundon) {
-				musicPlay.play(ID_SOUND_TIP, 0);
-			}
+//			if (Const.soundon) {
+//				musicPlay.play(ID_SOUND_TIP, 0);
+//			}
 			help--;
 			toolsChangedListener.onTipChanged(help);
 			drawLine(path.toArray(new Point[] {}));
@@ -526,14 +526,14 @@ public class GameView extends BoardView {
 	 */
 	public void refreshChange() {
 		if (refresh == 0) {
-			if (Const.soundon) {
-				musicPlay.play(ID_SOUND_ERROR, 0);
-			}
+//			if (Const.soundon) {
+//				musicPlay.play(ID_SOUND_ERROR, 0);
+//			}
 			return;
 		} else {
-			if (Const.soundon) {
-				musicPlay.play(ID_SOUND_REFRESH, 0);
-			}
+//			if (Const.soundon) {
+//				musicPlay.play(ID_SOUND_REFRESH, 0);
+//			}
 			refresh--;
 			toolsChangedListener.onRefreshChanged(refresh);
 			change();

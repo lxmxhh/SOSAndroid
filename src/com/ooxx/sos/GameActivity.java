@@ -6,7 +6,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -60,7 +59,7 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 	// 两个帮助按键的特效
 	private Animation anim = null;
 
-	private MediaPlayer player;
+	//private MediaPlayer player;
 
 	private Handler handler = new Handler() {
 		@Override
@@ -138,11 +137,11 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 		if (Const.first == true) {// 如果是第一次启动
 			startView();
 		} else {
-			player = MediaPlayer.create(this, R.raw.bg);
-			player.setLooping(true);// 设置循环播放
-			if (Const.soundon) {
-				player.start();
-			}
+//			player = MediaPlayer.create(this, R.raw.bg);
+//			player.setLooping(true);// 设置循环播放
+//			if (Const.soundon) {
+//				player.start();
+//			}
 			playingView();
 		}
 
@@ -182,11 +181,11 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 		img_title.startAnimation(scale);
 		img_startPlay.startAnimation(scale);
 
-		player = MediaPlayer.create(this, R.raw.bg);
-		player.setLooping(true);// 设置循环播放
-		if (Const.soundon) {
-			player.start();
-		}
+//		player = MediaPlayer.create(this, R.raw.bg);
+//		player.setLooping(true);// 设置循环播放
+//		if (Const.soundon) {
+//			player.start();
+//		}
 	}
 
 	/**
@@ -219,7 +218,7 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 		img_refresh.startAnimation(animIn);
 		text_tipNum.startAnimation(animIn);
 		text_refreshNum.startAnimation(animIn);
-		player.pause();
+		//player.pause();
 		gameView.startPlay();
 		toast();
 	}
@@ -286,17 +285,17 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 			handler.sendEmptyMessage(1);
 			break;
 		case GameView.PAUSE:
-			player.stop();
-			gameView.player.pause();
+			//player.stop();
+			//gameView.player.pause();
 			gameView.stopTimer();
 			break;
 		case GameView.QUIT:
-			player.release();
-			gameView.player.release();
+			//player.release();
+			//gameView.player.release();
 			gameView.stopTimer();
 			break;
 		case GameView.CONTINUE:
-			gameView.player.start();
+			//gameView.player.start();
 			break;
 		}
 	}
@@ -346,8 +345,8 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
             Const.ispause = false;
             gameView.setContinue();
             if (Const.soundon) {
-                player.start();
-                gameView.player.start();
+                //player.start();
+                //gameView.player.start();
             }
             if(pauseItem != null){
                 pauseItem.setTitle("暂停");
@@ -369,7 +368,7 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 	public boolean onCreateOptionsMenu(Menu menu) {
 		menu.add(Menu.NONE, 1, Menu.NONE, "重玩");
 		pauseItem = menu.add(Menu.NONE, 2, Menu.NONE, nString);
-		menu.add(Menu.NONE, 3, Menu.NONE, nsoundString);
+		menu.add(Menu.NONE, 3, Menu.NONE, "Wo+社区");
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -391,8 +390,8 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 							Const.count = 0;
 							gameView.setContinue();
 							if (Const.soundon) {
-								player.start();
-								gameView.player.start();
+								//player.start();
+								//gameView.player.start();
 							}
 						}
 					}).setNeutralButton("是",
@@ -413,8 +412,8 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 				Const.ispause = false;
 				gameView.setContinue();
 				if (Const.soundon) {
-					player.start();
-					gameView.player.start();
+//					player.start();
+//					gameView.player.start();
 				}
 			} else if (Const.ispause == false) {
 				nString = "继续";
@@ -478,10 +477,10 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 								public void onClick(DialogInterface dialog,
 										int which) {
 									gameView.setContinue();
-									if (Const.soundon) {
-										player.start();
-									}
-									gameView.player.start();
+									//if (Const.soundon) {
+										//player.start();
+									//}
+									//gameView.player.start();
 								}
 							});
 			dialog.show();
