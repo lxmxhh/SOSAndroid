@@ -509,7 +509,7 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 			TextView btn_menu = (TextView) findViewById(R.id.menu_imgbtn);// 看图
 			TextView btn_next = (TextView) findViewById(R.id.next_imgbtn);// 下一关
 			TextView btn_replay = (TextView) findViewById(R.id.replay_imgbtn);// 重玩
-			if (Const.level == 14 && Const.issuccess == true) {
+			if (Const.level == Const.totallevels - 1 && Const.issuccess == true) {
 				btn_next.setVisibility(View.GONE);
 				btn_menu.setVisibility(View.VISIBLE);
 				text_time.setText("恭喜你,顺利通关!");
@@ -564,17 +564,39 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 	 * 
 	 */
 	private void submitScore() {
-		 Log.e("cxs", "Const.level="+Const.level);
+		Log.e("cxs", "Const.level="+Const.level);
 
-         WogameTools.submitScore(GameActivity.this, WogameTools.LeadboardID_1, Const.level+1, Const.level+1+"关");
+		WogameTools.submitScore(GameActivity.this, WogameTools.LeadboardID_1, Const.level+1, Const.level+1+"关");
 
-         if((gameView.getTotalTime()
-                 - progress.getProgress() + 1)<=10){
-             for(int i = 0; i<5;i++){
-                 if(Const.level==i*3+2){ //level=0~14,  2,5,8,11,14->achieve
-                     WogameTools.UnlockAchievement(GameActivity.this, WogameTools.AchievementID[i]);
-                 }
-             }
-         }
+		switch (Const.level) {
+		case 2:
+			if((gameView.getTotalTime() - progress.getProgress() + 1)<=20){
+				WogameTools.UnlockAchievement(GameActivity.this, WogameTools.AchievementID[0]);
+			}
+			break;
+		case 5:
+			if((gameView.getTotalTime() - progress.getProgress() + 1)<=25){
+				WogameTools.UnlockAchievement(GameActivity.this, WogameTools.AchievementID[0]);
+			}
+			break;
+		case 8:
+			if((gameView.getTotalTime() - progress.getProgress() + 1)<=30){
+				WogameTools.UnlockAchievement(GameActivity.this, WogameTools.AchievementID[0]);
+			}
+			break;
+		case 11:
+			if((gameView.getTotalTime() - progress.getProgress() + 1)<=35){
+				WogameTools.UnlockAchievement(GameActivity.this, WogameTools.AchievementID[0]);
+			}
+			break;
+		case 14:
+			if((gameView.getTotalTime() - progress.getProgress() + 1)<=40){
+				WogameTools.UnlockAchievement(GameActivity.this, WogameTools.AchievementID[0]);
+			}
+			break;
+
+		default:
+			break;
+		}
 	}
 }

@@ -1,5 +1,7 @@
 package com.ooxx.sos.view;
 
+import android.R.integer;
+
 import com.ooxx.sos.R;
 
 public class Const {
@@ -20,6 +22,10 @@ public class Const {
 	 * 游戏级数
 	 */
 	public static int level = 0;
+	/**
+	 * 总关卡数
+	 */
+	public static int totallevels = 15;
 	/**
 	 * 游戏是否暂停
 	 */
