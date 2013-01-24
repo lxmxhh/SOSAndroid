@@ -200,7 +200,7 @@ public class GameActivity extends Activity implements OnToolsChangeListener,
 		img_startPlay.startAnimation(scaleOut);
 		img_title.setVisibility(View.GONE);
 		img_startPlay.setVisibility(View.GONE);
-		img_woButton.setVisibility(View.GONE);
+		//img_woButton.setVisibility(View.GONE);
 
 		progress.setMax(gameView.getTotalTime());
 		progress.setProgress(gameView.getTotalTime());
