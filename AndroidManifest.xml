@@ -29,7 +29,7 @@
 		
 		<!--Wo+社区截屏分享activity -->
 		<activity android:name="com.wogamecenter.internal.screenshot.ScreenShotDialog"
-			android:label="ScreenShotDialog" android:configChanges="keyboardHidden"
+			android:label="ScreenShotDialog" android:configChanges="orientation|keyboardHidden"
 			android:theme="@style/Transparent" />
 		
 		<!--Wo+社区道具商城activity -->
