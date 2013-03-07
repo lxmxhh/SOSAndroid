@@ -21,9 +21,6 @@ public class GameApplication extends Application {
         WoGameCenterSettings settings = new WoGameCenterSettings(gameName,
                 gameKey, gameSecret, gameID);
 
-        long before = System.currentTimeMillis();
         WoGameCenter.initialize(this, settings, new WoGameCenterDelegate() {});
-        long during = System.currentTimeMillis() - before;
-        Log.d("Test",  "Time elapse: " + during + " milliseconds");
     }
 }
