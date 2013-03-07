@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F8F9FB"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/ln_wo_title"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/wo_main_title_bg" >
+
+                <FrameLayout
+                    android:id="@+id/frameLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/img_wo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dip"
+                        android:layout_gravity="center"
+                        android:src="@drawable/wo_main_title_register" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/et_starting_registered_name"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/wo_input_background"
+                android:hint="手机号（将作为您的登录帐号）"
+                android:maxLength="20"
+                android:paddingLeft="2dip"
+                android:singleLine="true"
+                android:textSize="15dip" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip" >
+
+                <EditText
+                    android:id="@+id/et_starting_registered_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/wo_input_background"
+                    android:hint="验证码（30分钟有效）"
+                    android:maxLength="20"
+                    android:paddingLeft="2dip"
+                    android:singleLine="true"
+                    android:textSize="15dip" >
+
+                    <requestFocus />
+                </EditText>
+
+                <Button
+                    android:id="@+id/bt_registered_getcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:background="@drawable/wo_fast_login_press"
+                    android:text="获取验证码"
+                    android:textColor="#055333" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_starting_registered_password"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/wo_input_background"
+                android:hint="密码"
+                android:maxLength="20"
+                android:paddingLeft="2dip"
+                android:password="true"
+                android:singleLine="true"
+                android:textSize="15dip" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="10dip" >
+
+                <CheckBox
+                    android:id="@+id/cb_registered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我已阅读并同意《" android:textSize="13dip" android:textColor="#000" android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tx_registered_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="13dip" android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="》" android:textColor="#000" android:textSize="13dip"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_registered"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/wo_login_select"
+                android:text="注 册"
+                android:textColor="#024d65" android:layout_marginTop="10dip"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

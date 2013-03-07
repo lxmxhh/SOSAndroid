@@ -1,6 +1,8 @@
 package com.ooxx.sos;
 
 import android.app.Application;
+import android.util.Log;
+
 import com.wogamecenter.api.WoGameCenter;
 import com.wogamecenter.api.WoGameCenterDelegate;
 import com.wogamecenter.api.WoGameCenterSettings;
@@ -18,6 +20,10 @@ public class GameApplication extends Application {
         super.onCreate();
         WoGameCenterSettings settings = new WoGameCenterSettings(gameName,
                 gameKey, gameSecret, gameID);
+
+        long before = System.currentTimeMillis();
         WoGameCenter.initialize(this, settings, new WoGameCenterDelegate() {});
+        long during = System.currentTimeMillis() - before;
+        Log.d("Test",  "Time elapse: " + during + " milliseconds");
     }
 }

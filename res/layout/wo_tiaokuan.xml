@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F8F9FB"
+    android:orientation="vertical" >
+
+       <FrameLayout
+            android:id="@+id/ln_wo_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/wo_main_title_bg">
+
+            <Button
+                android:id="@+id/bt_wo_title_back"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/wo_main_title_back_select"/>
+
+            <FrameLayout
+                android:id="@+id/frameLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" >
+
+                <TextView
+                    android:id="@+id/tx_wo_title"
+                    style="@style/title_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold" android:text="沃商店服务条款"/>
+            </FrameLayout>
+
+        </FrameLayout>
+
+       <WebView
+           android:id="@+id/web_tiaokuan"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+
+</LinearLayout>
+
